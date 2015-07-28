@@ -22,5 +22,5 @@ platforms:
 suites:
   - name: default
     run_list:
-     - recipe[osman::default]
+    - recipe[osman::default]
     attributes:
