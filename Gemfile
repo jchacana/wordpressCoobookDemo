@@ -1,28 +1,20 @@
 source 'https://rubygems.org'
 
 # Dependency Managemenet
-# gem 'berkshelf', '> 3.0'
-# gem 'hashie', '~> 2'
-# gem 'rake'
-
-
-# Dependency Managemenet
-gem 'berkshelf', '~> 2.0.16'
+gem 'berkshelf', '> 3.0'
+gem 'chef', '>= 11.12'
 
 # Test Kitchen
 gem 'test-kitchen'
 gem 'kitchen-vagrant'
-gem 'kitchen-fog'
 
 # Linting
 gem 'rubocop'
 gem 'foodcritic'
 
-# Unit Tests
+# Test
 gem 'chefspec'
-
-# Vault
-gem 'chef-vault'
+gem 'serverspec'
 
 # Test Automation
 gem 'guard'
