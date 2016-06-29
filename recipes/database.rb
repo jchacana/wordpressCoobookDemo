@@ -1,5 +1,9 @@
 include_recipe "mysql::client" unless platform_family?('windows') # No MySQL client on Windows
-include_recipe "mysql-chef_gem" # Replaces mysql::ruby
+
+mysql_chef_gem 'default' do
+  action [:install]
+end
+
 
 ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
 ::Chef::Recipe.send(:include, Wordpress::Helpers)

@@ -7,7 +7,7 @@ name 'wordpressCoobookDemo'
 version '1.0.0'
 
 depends 'mysql', '~> 5.0.0'
-depends 'mysql-chef_gem'
+depends 'mysql-chef_gem', '~> 1.0'
 depends 'build-essential'
 depends 'tar'
 depends 'nginx', '~> 2.7.4'
