@@ -1,18 +1,32 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf'
+# Dependency Managemenet
+# gem 'berkshelf', '> 3.0'
+# gem 'hashie', '~> 2'
+# gem 'rake'
 
-# Uncomment these lines if you want to live on the Edge:
-#
-# group :development do
-#   gem "berkshelf", github: "berkshelf/berkshelf"
-#   gem "vagrant", github: "mitchellh/vagrant", tag: "v1.6.3"
-# end
-#
-# group :plugins do
-#   gem "vagrant-berkshelf", github: "berkshelf/vagrant-berkshelf"
-#   gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
-# end
 
+# Dependency Managemenet
+gem 'berkshelf', '~> 2.0.16'
+
+# Test Kitchen
 gem 'test-kitchen'
 gem 'kitchen-vagrant'
+gem 'kitchen-fog'
+
+# Linting
+gem 'rubocop'
+gem 'foodcritic'
+
+# Unit Tests
+gem 'chefspec'
+
+# Vault
+gem 'chef-vault'
+
+# Test Automation
+gem 'guard'
+gem 'guard-rspec'
+gem 'guard-foodcritic'
+gem 'guard-rubocop'
+gem 'guard-kitchen'
