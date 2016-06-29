@@ -23,13 +23,13 @@ group :red_green_refactor, halt_on_fail: true do
     watch('.rubocop.yml') { |m| File.dirname(m[0]) }
   end
 
-  guard 'kitchen' do
-    watch(/test\/.+/)
-    watch(/recipes\/(.+)\.rb$/)
-    watch(/attributes\/(.+)\.rb$/)
-    watch(/files\/(.+)/)
-    watch(/templates\/(.+)/)
-    watch(/providers\/(.+)\.rb$/)
-    watch(/resources\/(.+)\.rb$/)
-  end
+  # guard 'kitchen' do
+  #   watch(/test\/.+/)
+  #   watch(/recipes\/(.+)\.rb$/)
+  #   watch(/attributes\/(.+)\.rb$/)
+  #   watch(/files\/(.+)/)
+  #   watch(/templates\/(.+)/)
+  #   watch(/providers\/(.+)\.rb$/)
+  #   watch(/resources\/(.+)\.rb$/)
+  # end
 end
