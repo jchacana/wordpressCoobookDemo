@@ -1,3 +1,3 @@
 
-include_recipe 'osman::database'
-include_recipe 'osman::nginx_server'
+include_recipe 'wordpressCoobookDemo::database'
+include_recipe 'wordpressCoobookDemo::nginx_server'
