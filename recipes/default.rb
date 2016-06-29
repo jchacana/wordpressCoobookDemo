@@ -1,3 +1,3 @@
 
-include_recipe 'wordpressCoobookDemo::database'
-include_recipe 'wordpressCoobookDemo::nginx_server'
+include_recipe 'wordpressCookbookDemo::database'
+include_recipe 'wordpressCookbookDemo::nginx_server'

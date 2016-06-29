@@ -3,7 +3,7 @@ maintainer_email 'ravaria@nisum.com'
 license 'Apache 2.0'
 description 'Installs/Configures wordpress '
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-name 'wordpressCoobookDemo'
+name 'wordpressCookbookDemo'
 version '1.0.0'
 
 %w{ php openssl }.each do |cb|

@@ -21,7 +21,7 @@ include_recipe "php::module_mysql"
 node.set_unless['nginx']['default_site_enabled'] = false
 include_recipe "nginx"
 
-include_recipe "wordpressCoobookDemo::app"
+include_recipe "wordpressCookbookDemo::app"
 
 template "#{node['nginx']['dir']}/sites-enabled/wordpress.conf" do
   source "nginx.conf.erb"
