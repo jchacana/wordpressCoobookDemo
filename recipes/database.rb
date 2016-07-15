@@ -8,7 +8,6 @@ mysql2_chef_gem 'default' do
   action :install
 end
 
-
 ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
 ::Chef::Recipe.send(:include, Wordpress::Helpers)
 
@@ -43,10 +42,10 @@ if is_local_host? db['host']
   end
 
   mysql_connection_info = {
-    :host     => 'localhost',
-    :username => 'root',
-    :socket   => socket,
-    :password => db['root_password']
+    host: 'localhost',
+    username: 'root',
+    socket: socket,
+    password: db['root_password']
   }
 
   mysql_database db['name'] do

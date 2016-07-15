@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'berkshelf', '> 3.0'
 gem 'chef', '>= 11.12'
 
-
 # Linting
 gem 'rubocop'
 gem 'foodcritic'
@@ -16,7 +15,7 @@ gem 'serverspec'
 # Test Automation
 group :development do
   gem 'test-kitchen'
-  gem 'kitchen-vagrant'  
+  gem 'kitchen-vagrant'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-foodcritic'
