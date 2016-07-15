@@ -13,7 +13,7 @@ describe 'wordpressCookbookDemo::database' do
       node.set['wordpress']['db']['name'] = 'test_db'
       node.set['wordpress']['db']['user'] = 'fake_user'
     end
-    runner.converge(described_recipe) do
+    runner.converge(described_recipe) doin master
       stub_command('test -f /var/lib/mysql/mysql.sock').and_return(true)
     end
   end
@@ -46,4 +46,3 @@ describe 'wordpressCookbookDemo::database' do
     end
   end
 end
-test_db
