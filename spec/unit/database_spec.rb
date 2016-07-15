@@ -10,7 +10,8 @@ describe 'wordpressCookbookDemo::database' do
     runner = ChefSpec::SoloRunner.new do |node|
       node.set['wordpress']['version'] = 'latest'
       node.set['wordpressCookbookDemo']['instance_name'] = 'test'
-      node.set['wordpress']['db']['name'] = 'lala'
+      node.set['wordpress']['db']['name'] = 'test_db'
+      node.set['wordpress']['db']['user'] = 'fake_user'
     end
     runner.converge(described_recipe) do
       stub_command('test -f /var/lib/mysql/mysql.sock').and_return(true)
@@ -36,12 +37,13 @@ describe 'wordpressCookbookDemo::database' do
     end
   end
 
-  context 'check_create_mysql_database' do
+  context 'settings database' do
     it 'should create database' do
-      expect(chef_run).to create_mysql_database('lala')
+      expect(chef_run).to create_mysql_database('test_db')
     end
     it 'should create user for db' do
-      expect(chef_run).to create_database_user('lala')
+      expect(chef_run).to create_database_user('fake_user')
     end
   end
 end
+test_db
