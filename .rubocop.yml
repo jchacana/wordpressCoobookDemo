@@ -1,0 +1,8 @@
+AllCops:
+  Exclude:
+    - 'Guardfile'
+    - 'Vagrantfile'
+
+Metrics/LineLength:
+  Max: 120
+
