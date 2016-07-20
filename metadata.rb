@@ -6,8 +6,6 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 name 'wordpressCookbookDemo'
 version '1.0.0'
 
-
-
 %w(php openssl).each do |cb|
   depends cb
 end
