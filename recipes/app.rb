@@ -40,7 +40,7 @@ directory node['wordpress']['dir'] do
   end
 end
 
-archive = platform_family?('windows') ? 'wordpress.zip' : 'wordpress.tar.gz'
+# archive = platform_family?('windows') ? 'wordpress.zip' : 'wordpress.tar.gz'
 
 if platform_family?('windows')
   windows_zipfile node['wordpress']['parent_dir'] do
