@@ -47,7 +47,8 @@ describe 'wordpressCookbookDemo::default' do
     end
 
     it 'should create user for db and grant access' do
-      expect(chef_run).to create_database_user('fake_user')
+      expect(chef_run).to create_mysql_database_user('fake_user')
+      expect(chef_run).to grant_mysql_database_user('fake_user')
     end
 
   end
