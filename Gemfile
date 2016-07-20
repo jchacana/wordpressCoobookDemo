@@ -16,6 +16,7 @@ gem 'serverspec'
 group :development do
   gem 'test-kitchen'
   gem 'kitchen-vagrant'
+  gem 'kitchen-docker'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-foodcritic'
