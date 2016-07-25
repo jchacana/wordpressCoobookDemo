@@ -17,6 +17,7 @@ tmtags
 mkmf.log
 *.un~
 pkg/
+.idea/
 
 ## COMPILED ##
 ##############
@@ -48,5 +49,4 @@ bin/*
 ############
 .kitchen/
 .kitchen.local.yml
-
-.idea/
+Dockerfile*

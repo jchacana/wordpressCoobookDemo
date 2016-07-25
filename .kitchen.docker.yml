@@ -1,0 +1,25 @@
+---
+driver:
+  name: docker
+  docker: /usr/bin/docker
+  use_sudo: false
+  provision_command: curl -L http://www.opscode.com/chef/install.sh | bash
+
+provisioner::
+  require_chef_omnibus: 12.3.0
+
+
+platforms:
+- name: centos-6.6
+  driver_config:
+    image: centos:6.6
+    platform: centos
+
+suites:
+  - name: default
+    run_list:
+    - recipe[wordpressCookbookDemo::default]
+    attributes:
+      wordpress:
+        db:
+          host: 123.4.7.5

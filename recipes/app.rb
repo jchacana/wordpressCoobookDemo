@@ -49,6 +49,8 @@ if platform_family?('windows')
     not_if { ::File.exist?("#{node['wordpress']['dir']}\\index.php") }
   end
 else
+  package 'tar'
+
   tar_extract node['wordpress']['url'] do
     target_dir node['wordpress']['dir']
     creates File.join(node['wordpress']['dir'], 'index.php')
