@@ -47,12 +47,13 @@ a.out
 ###########
 .watchr
 .rspec
-spec/*
 spec/fixtures/*
-test/*
-features/*
 Guardfile
 Procfile
+files/default/__test_hosts
+recipes/__test_setup_update_hosts_file.rb
+reports
+reports/*
 
 # SCM #
 #######
@@ -66,16 +67,16 @@ Procfile
 */.bzr/*
 */.hg/*
 */.svn/*
+NERD_tree*
 
 # Berkshelf #
 #############
+Berksfile.lock
+Berksfile.tdev
+Berksfile.prod
 cookbooks/*
 tmp
-
-# Cookbooks #
-#############
-CONTRIBUTING
-CHANGELOG*
+tmp/*
 
 # Strainer #
 ############
@@ -89,6 +90,6 @@ Strainerfile
 .vagrant
 Vagrantfile
 
-# Travis #
-##########
-.travis.yml
+# Gemfile #
+###########
+Gemfile.lock
