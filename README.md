@@ -93,3 +93,35 @@ Then after write a suite of serverspec running the follwing command
 ```
 ~wordpressCookbookDemo$ kitchen verify default
 ```
+
+Running serverspec with docker
+=============================
+
+The cookbook include a kitchen yaml file (kitchen.docker.yml) to use docker as provider instead of vagrant with virtualbox. it going to spin up a docker image.
+
+Install docker in your local machine
+
+For Ubuntu 14.04 LTS
+
+```
+~sudo apt-get install docker-engine
+```
+
+Run kitchen with docker with the folowing command
+
+```
+~wordpressCookbookDemo$ KITCHEN_YAML=".kitchen.docker.yml" kitchen converge default
+```
+ 
+ or export the variable KITCHEN_YAML
+```
+~wordpressCookbookDemo$ export KITCHEN_YAML=".kitchen.docker.yml"
+~wordpressCookbookDemo$ kitchen converge default
+
+```
+
+Then after write a suite of serverspec running the follwing command
+```
+~wordpressCookbookDemo$ kitchen verify default
+```
+
