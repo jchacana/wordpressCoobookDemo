@@ -18,14 +18,14 @@
 #
 
 ::Chef::Recipe.send(:include, Opscode::OpenSSL::Password)
-node.set_unless['wordpress']['keys']['auth'] = secure_password
-node.set_unless['wordpress']['keys']['secure_auth'] = secure_password
-node.set_unless['wordpress']['keys']['logged_in'] = secure_password
-node.set_unless['wordpress']['keys']['nonce'] = secure_password
-node.set_unless['wordpress']['salt']['auth'] = secure_password
-node.set_unless['wordpress']['salt']['secure_auth'] = secure_password
-node.set_unless['wordpress']['salt']['logged_in'] = secure_password
-node.set_unless['wordpress']['salt']['nonce'] = secure_password
+node.normal_unless['wordpress']['keys']['auth'] = secure_password
+node.normal_unless['wordpress']['keys']['secure_auth'] = secure_password
+node.normal_unless['wordpress']['keys']['logged_in'] = secure_password
+node.normal_unless['wordpress']['keys']['nonce'] = secure_password
+node.normal_unless['wordpress']['salt']['auth'] = secure_password
+node.normal_unless['wordpress']['salt']['secure_auth'] = secure_password
+node.normal_unless['wordpress']['salt']['logged_in'] = secure_password
+node.normal_unless['wordpress']['salt']['nonce'] = secure_password
 node.save unless Chef::Config[:solo]
 
 directory node['wordpress']['dir'] do

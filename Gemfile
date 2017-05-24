@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Dependency Managemenet
 gem 'berkshelf', '> 3.0'
-gem 'chef', '>= 11.12'
+gem 'chef', '> 12.5'
 
 # Linting
 gem 'rubocop'

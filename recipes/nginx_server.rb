@@ -1,5 +1,5 @@
 
-node.set_unless['php-fpm']['pools'] = []
+node.normal['php-fpm']['pools'] = []
 
 include_recipe 'php-fpm'
 
@@ -18,7 +18,7 @@ end
 
 include_recipe 'php::module_mysql'
 
-node.set_unless['nginx']['default_site_enabled'] = false
+node.normal['nginx']['default_site_enabled'] = false
 include_recipe 'nginx'
 
 include_recipe 'wordpressCookbookDemo::app'

@@ -6,7 +6,7 @@ driver:
 
 provisioner:
   name: 
-  require_chef_omnibus: 12.3.0
+  require_chef_omnibus: latest
   chef_omnibus_url: https://www.chef.io/chef/install.sh
 
 

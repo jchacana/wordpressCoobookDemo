@@ -5,6 +5,7 @@ description 'Installs/Configures wordpress '
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 name 'wordpressCookbookDemo'
 version '1.0.0'
+chef_version '>= 12.4.1' if respond_to?(:chef_version)
 
 %w(php openssl).each do |cb|
   depends cb
