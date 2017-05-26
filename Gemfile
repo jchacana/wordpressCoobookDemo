@@ -25,3 +25,7 @@ group :development do
   gem 'kitchen-vagrant'
   gem 'kitchen-docker'
 end
+
+# OS X Notifications for guard
+# brew install terminal-notifier
+gem 'terminal-notifier-guard' 
